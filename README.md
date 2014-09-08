@@ -12,10 +12,12 @@ I developed Tab Transporter out of personal utility because I couldn't find anyt
 
 
 ## Usage
-
-TODO
-
-I launch it via Alfred, with `tt`.
+- Open AppleScript Editor in Applications > Utilities 
+- Copy and paste the contents of `/AppleScript/tab_transporter.scpt` into a new document
+- File > Save
+  - File Format: Application 
+  - Where: Applications
+- Launch it when you want to move tabs (I type `tt` in [Alfred](http://www.alfredapp.com), but Spotlight works just as well)
 
 
 ## Alternatives
