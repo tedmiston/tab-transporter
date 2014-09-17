@@ -11,9 +11,25 @@ tell application "Safari"
 end tell
 
 -- stash tabs from Safari's frontmost window
+set urls to {}
 tell application "Safari"
-	set urls to get URL of every tab of front window
+	set the_tabs to get every tab of front window
+	repeat with t in the_tabs
+		set u to (get URL of t)
+		try
+			if u is not "topsites://" then
+				copy u to end of urls
+			end if
+		on error errorStr number errorNumber
+			-- swallow blank tabs
+		end try
+	end repeat
 end tell
+
+if (count of urls) = 0 then
+	display alert "There are no valid URLs to transport."
+	return
+end if
 
 -- close it
 tell application "Safari"
