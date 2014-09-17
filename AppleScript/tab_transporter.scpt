@@ -10,6 +10,13 @@ tell application "Safari"
 	end if
 end tell
 
+tell application "Safari"
+	if get front window is miniaturized then
+		display alert "The frontmost window has been ignored due to being minimized."
+		return
+	end if
+end tell
+
 -- stash tabs from Safari's frontmost window
 set urls to {}
 tell application "Safari"
