@@ -1,3 +1,7 @@
+if application "Safari" is not running then
+	return
+end if
+
 -- stash tabs from Safari's frontmost window
 tell application "Safari"
 	set urls to get URL of every tab of front window
