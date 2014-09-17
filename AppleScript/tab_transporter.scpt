@@ -3,6 +3,13 @@ if application "Safari" is not running then
 	return
 end if
 
+tell application "Safari"
+	if (count windows) = 0 then
+		display alert "There are no open tabs to transport."
+		return
+	end if
+end tell
+
 -- stash tabs from Safari's frontmost window
 tell application "Safari"
 	set urls to get URL of every tab of front window
