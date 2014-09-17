@@ -1,4 +1,5 @@
 if application "Safari" is not running then
+	display alert "Safari is not running."
 	return
 end if
 
