@@ -1,7 +1,7 @@
 tab-transporter
 ===============
 
-Take all tabs in the frontmost Safari window and move them into Chrome.
+Move tabs from the frontmost Safari window into Chrome.
 
 I developed Tab Transporter out of personal utility because I couldn't find anything else that did exactly what I wanted.
 
@@ -9,21 +9,20 @@ Tested only on Mac OS X 10.9.4.
 
 ## Use Case
 - I've opened a bunch of tabs in Safari (such as new apps to check out), but I need to get them out of the way for now to focus on work
-- The [OneTab](https://www.one-tab.com) extension handle this in Chrome, but it doesn't exist for Safari
+- [OneTab](https://www.one-tab.com) handles this in Chrome, but it doesn't exist for Safari
 - I desire to stash all of these tabs in one centralized location
 
-
-## Usage
+## Installation
 - Open AppleScript Editor in Applications > Utilities 
 - Copy and paste the contents of `/AppleScript/tab_transporter.scpt` into a new document
 - File > Save
   - File Format: Application 
   - Where: Applications
+
+## Usage
 - Launch it when you want to move tabs (I type `tt` in [Alfred](http://www.alfredapp.com), but Spotlight works just as well)
 
-
 ## Alternatives
-
 This section covers possible solutions that didn't work for me, which led me to create Tab Transporter.
 
 - `Add Bookmarks for These n Tabs` *(doesn't integrate with Chrome tabs)*
