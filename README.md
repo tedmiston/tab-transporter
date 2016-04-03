@@ -1,5 +1,4 @@
-tab-transporter
-===============
+# Tab Transporter
 
 Move tabs from the frontmost Safari window into Chrome.
 
