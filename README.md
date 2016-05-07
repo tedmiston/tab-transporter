@@ -24,6 +24,8 @@ Tested only on Mac OS X 10.9.4.
 ## Alternatives
 This section covers possible solutions that didn't work for me, which led me to create Tab Transporter.
 
+Dr. Drang wrote a similar survey of the same problem in October 2012 in *[Saving browser tab sets](http://leancrew.com/all-this/2012/10/saving-browser-tab-sets/)*.
+
 - [Pinboard Tab Sets](https://blog.pinboard.in/2011/04/new_save_tabs_feature/)
   - Available in the [Save tabs to Pinboard](https://pinboard.in/resources/safari/save_tabs) Safari extension (which is separate from the main [browser extensions](https://pinboard.in/resources/extensions/))
 - Safari
