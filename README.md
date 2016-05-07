@@ -24,6 +24,8 @@ Tested only on Mac OS X 10.9.4.
 ## Alternatives
 This section covers possible solutions that didn't work for me, which led me to create Tab Transporter.
 
+- [Pinboard Tab Sets](https://blog.pinboard.in/2011/04/new_save_tabs_feature/)
+  - Available in the [Save tabs to Pinboard](https://pinboard.in/resources/safari/save_tabs) Safari extension (which is separate from the main [browser extensions](https://pinboard.in/resources/extensions/))
 - Safari
   - `Add Bookmarks for These n Tabs` - doesn't integrate with Chrome tabs
   - `Add These n Tabs to Reading List` - doesn't sync with OneTab in Chrome, Pocket, etc.
