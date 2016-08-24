@@ -4,7 +4,7 @@ Move tabs from the frontmost Safari window into Chrome.
 
 I developed Tab Transporter out of personal utility because I couldn't find anything else that did exactly what I wanted.
 
-Tested only on Mac OS X 10.9.4.
+Tested on Mac OS X 10.11.6.
 
 ## Use Case
 - I've opened a bunch of tabs in Safari (such as new apps to check out), but I need to get them out of the way for now to focus on work
