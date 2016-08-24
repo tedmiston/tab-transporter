@@ -7,11 +7,13 @@ I developed Tab Transporter out of personal utility because I couldn't find anyt
 Tested on Mac OS X 10.11.6.
 
 ## Use Case
+
 - I've opened a bunch of tabs in Safari (such as new apps to check out), but I need to get them out of the way for now to focus on work
 - [OneTab](https://www.one-tab.com) handles this in Chrome, but it doesn't exist for Safari
 - I desire to stash all of these tabs in one centralized location
 
 ## Installation
+
 - Open AppleScript Editor in Applications > Utilities 
 - Copy and paste the contents of `/AppleScript/tab_transporter.scpt` into a new document
 - File > Save
@@ -19,6 +21,7 @@ Tested on Mac OS X 10.11.6.
   - Where: Applications
 
 ## Usage
+
 - Launch it when you want to move tabs (I type `tt` in [Alfred](http://www.alfredapp.com), but Spotlight works just as well)
 
 ## Alternatives
