@@ -15,10 +15,12 @@ Tested on Mac OS X 10.11.6.
 ## Installation
 
 - Open AppleScript Editor in Applications > Utilities 
-- Copy and paste the contents of `/AppleScript/tab_transporter.scpt` into a new document
-- File > Save
-  - File Format: Application 
-  - Where: Applications
+- Copy and paste the contents of `/AppleScript/tab_transporter.applescript` into a new document
+- `File > Export...`
+	  - Export As: Tab Transporter.app
+	  - Folder: Applications
+	  - File Format: Application 
+	  - Code Sign: Don't Code Sign
 
 ## Usage
 
