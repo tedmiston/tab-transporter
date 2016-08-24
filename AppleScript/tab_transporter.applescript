@@ -3,23 +3,20 @@ if application "Safari" is not running then
 	return
 end if
 
+set urls to {}
+
 tell application "Safari"
 	if (count windows) = 0 then
 		display alert "There are no open tabs to transport."
 		return
 	end if
-end tell
-
-tell application "Safari"
+	
 	if get front window is miniaturized then
 		display alert "The frontmost window has been ignored due to being minimized."
 		return
 	end if
-end tell
-
--- stash tabs from Safari's frontmost window
-set urls to {}
-tell application "Safari"
+	
+	-- stash tabs from Safari's frontmost window
 	set the_tabs to get every tab of front window
 	repeat with t in the_tabs
 		set u to (get URL of t)
@@ -31,15 +28,13 @@ tell application "Safari"
 			-- swallow blank tabs
 		end try
 	end repeat
-end tell
-
-if (count of urls) = 0 then
-	display alert "There are no valid URLs to transport."
-	return
-end if
-
--- close it
-tell application "Safari"
+	
+	if (count of urls) = 0 then
+		display alert "There are no valid URLs to transport."
+		return
+	end if
+	
+	-- close it
 	activate
 	tell application "System Events"
 		keystroke "w" using {command down, shift down}
@@ -54,5 +49,6 @@ tell application "Google Chrome"
 			open location u
 		end repeat
 	end tell
+	
 	activate
 end tell
