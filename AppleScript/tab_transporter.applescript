@@ -18,14 +18,16 @@ using terms from application "Safari"
 			return
 		end if
 		
+		set currentWindow to front window
+		
 		-- exit if no frontmost tabs are open
-		if get front window is miniaturized then
+		if currentWindow is miniaturized then
 			display alert "The frontmost window of " & sourceBrowser & " is ignored because it is minimized."
 			return
 		end if
 		
 		-- stash tabs from source browser's frontmost window
-		set the_tabs to get every tab of front window
+		set the_tabs to get every tab of currentWindow
 		repeat with t in the_tabs
 			set u to (get URL of t)
 			try
@@ -43,11 +45,7 @@ using terms from application "Safari"
 			return
 		end if
 		
-		-- close window in source browser
-		activate
-		tell application "System Events"
-			keystroke "w" using {command down, shift down}
-		end tell
+		close currentWindow -- close window in source browser
 		
 	end tell
 end using terms from
