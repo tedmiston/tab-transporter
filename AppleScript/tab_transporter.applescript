@@ -16,36 +16,23 @@ end run
 
 -- warn if browser isn't running
 on assertRunning()
-	if application sourceBrowser is not running then
-		set msg to sourceBrowser & " is not running."
-		peaceOut(msg)
-	end if
+	if application sourceBrowser is not running then peaceOut(sourceBrowser & " is not running.")
 end assertRunning
 
 -- warn if browser has no open windows
 on assertHasOpenWindow()
 	using terms from application "Safari"
-		tell application sourceBrowser
-			set openWindowCount to count windows
-		end tell
+		tell application sourceBrowser to set openWindowCount to count windows
 	end using terms from
-	if openWindowCount ² 0 then
-		set msg to "There are no open windows to transport from " & sourceBrowser & "."
-		peaceOut(msg)
-	end if
+	if openWindowCount ² 0 then peaceOut("There are no open windows to transport from " & sourceBrowser & ".")
 end assertHasOpenWindow
 
 -- warn if window is minimized to the Dock
 on assertFrontmost()
 	using terms from application "Safari"
-		tell application sourceBrowser
-			set sourceWindow to front window
-		end tell
+		tell application sourceBrowser to set sourceWindow to front window
 	end using terms from
-	if sourceWindow is miniaturized then
-		set msg to "The frontmost window of " & sourceBrowser & " is ignored because it is minimized."
-		peaceOut(msg)
-	end if
+	if sourceWindow is miniaturized then peaceOut("The frontmost window of " & sourceBrowser & " is ignored because it is minimized.")
 	return sourceWindow
 end assertFrontmost
 
@@ -72,19 +59,14 @@ end getTabs
 
 -- warn if no urls can be moved (ex. topsites:// page)
 on assertUrlsMoveable(urls)
-	if (count of urls) = 0 then
-		set msg to "There are no valid URLs to transport."
-		peaceOut(msg)
-	end if
+	if (count of urls) = 0 then peaceOut("There are no valid URLs to transport.")
 end assertUrlsMoveable
 
 -- close tabs in source browser
 on closeTabs(sourceWindow)
 	using terms from application "Safari"
-		tell application sourceBrowser
-			-- TODO: breaks "History > Reopen Last Closed Window" in Safari
-			close sourceWindow
-		end tell
+		-- TODO: breaks "History > Reopen Last Closed Window" in Safari
+		tell application sourceBrowser to close sourceWindow
 	end using terms from
 end closeTabs
 
