@@ -1,79 +1,79 @@
 -- Transport tabs from one browser to another.
 
 -- config
-property sourceBrowser : "Safari"
-property destinationBrowser : "Google Chrome"
+property source_browser : "Safari"
+property destination_browser : "Google Chrome"
 
 on run
-	assertRunning()
-	assertHasOpenWindow()
-	set sourceWindow to assertFrontmost()
-	set urls to getTabs(sourceWindow)
-	assertUrlsMoveable(urls)
-	closeTabs(sourceWindow)
-	openTabs(urls)
+	assert_running()
+	assert_has_open_window()
+	set source_window to assert_frontmost()
+	set urls to get_tabs(source_window)
+	assert_urls_moveable(urls)
+	close_tabs(source_window)
+	open_tabs(urls)
 end run
 
 -- warn if browser isn't running
-on assertRunning()
-	if application sourceBrowser is not running then peaceOut(sourceBrowser & " is not running.")
-end assertRunning
+on assert_running()
+	if application source_browser is not running then peace_out(source_browser & " is not running.")
+end assert_running
 
 -- warn if browser has no open windows
-on assertHasOpenWindow()
+on assert_has_open_window()
 	using terms from application "Safari"
-		tell application sourceBrowser to set openWindowCount to count windows
+		tell application source_browser to set open_window_count to count windows
 	end using terms from
-	if openWindowCount ² 0 then peaceOut("There are no open windows to transport from " & sourceBrowser & ".")
-end assertHasOpenWindow
+	if open_window_count ² 0 then peace_out("There are no open windows to transport from " & source_browser & ".")
+end assert_has_open_window
 
 -- warn if window is minimized to the Dock
-on assertFrontmost()
+on assert_frontmost()
 	using terms from application "Safari"
-		tell application sourceBrowser to set sourceWindow to front window
+		tell application source_browser to set source_window to front window
 	end using terms from
-	if sourceWindow is miniaturized then peaceOut("The frontmost window of " & sourceBrowser & " is ignored because it is minimized.")
-	return sourceWindow
-end assertFrontmost
+	if source_window is miniaturized then peace_out("The frontmost window of " & source_browser & " is ignored because it is minimized.")
+	return source_window
+end assert_frontmost
 
 -- collect tabs from source browser
-on getTabs(sourceWindow)
+on get_tabs(source_window)
 	set urls to {} -- list of urls to transport
 	using terms from application "Safari"
-		tell application sourceBrowser
-			set the_tabs to get every tab of sourceWindow
+		tell application source_browser
+			set the_tabs to get every tab of source_window
 			repeat with t in the_tabs
 				set u to (get URL of t)
 				try
 					if u is not "topsites://" then
 						copy u to end of urls
 					end if
-				on error errorStr number errorNumber
+				on error errorStr number errorNumber -- TODO: hmmm
 					-- swallow blank tabs
 				end try
 			end repeat
 		end tell
 	end using terms from
 	return urls
-end getTabs
+end get_tabs
 
 -- warn if no urls can be moved (ex. topsites:// page)
-on assertUrlsMoveable(urls)
-	if (count of urls) = 0 then peaceOut("There are no valid URLs to transport.")
-end assertUrlsMoveable
+on assert_urls_moveable(urls)
+	if (count of urls) = 0 then peace_out("There are no valid URLs to transport.")
+end assert_urls_moveable
 
 -- close tabs in source browser
-on closeTabs(sourceWindow)
+on close_tabs(source_window)
 	using terms from application "Safari"
 		-- TODO: breaks "History > Reopen Last Closed Window" in Safari
-		tell application sourceBrowser to close sourceWindow
+		tell application source_browser to close source_window
 	end using terms from
-end closeTabs
+end close_tabs
 
 -- open tabs in destination browser
-on openTabs(urls)
+on open_tabs(urls)
 	using terms from application "Google Chrome"
-		tell application destinationBrowser
+		tell application destination_browser
 			tell (make new window)
 				set URL of active tab to get item 1 of urls
 				repeat with u in rest of urls
@@ -83,10 +83,10 @@ on openTabs(urls)
 			activate
 		end tell
 	end using terms from
-end openTabs
+end open_tabs
 
 -- end this script
-on peaceOut(errorMessage)
-	display alert errorMessage
+on peace_out(error_message)
+	display alert error_message
 	error number -128
-end peaceOut
+end peace_out
