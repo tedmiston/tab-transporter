@@ -36,22 +36,16 @@ on assertFrontmost()
 	return sourceWindow
 end assertFrontmost
 
--- collect tabs from source browser
+-- collect tabs from source browser, swallowing blank tabs
 on getTabs(sourceWindow)
 	set urls to {} -- list of urls to transport
 	using terms from application "Safari"
 		tell application sourceBrowser
-			set theTabs to get every tab of sourceWindow
-			repeat with t in theTabs
-				set u to (get URL of t)
-				try
-					if u is not "topsites://" then
-						copy u to end of urls
-					end if
-				on error errorStr number errorNumber
-					-- swallow blank tabs
-				end try
-			end repeat
+			try
+				repeat with t in tabs of sourceWindow
+					if URL of t is not "topsites://" then copy URL of t to end of urls
+				end repeat
+			end try
 		end tell
 	end using terms from
 	return urls
