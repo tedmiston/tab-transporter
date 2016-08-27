@@ -41,8 +41,8 @@ on getTabs(sourceWindow)
 	set urls to {} -- list of urls to transport
 	using terms from application "Safari"
 		tell application sourceBrowser
-			set the_tabs to get every tab of sourceWindow
-			repeat with t in the_tabs
+			set theTabs to get every tab of sourceWindow
+			repeat with t in theTabs
 				set u to (get URL of t)
 				try
 					if u is not "topsites://" then
