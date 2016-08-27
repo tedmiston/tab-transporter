@@ -1,67 +1,110 @@
-set sourceBrowser to "Safari"
-set destinationBrowser to "Google Chrome"
+-- Transport tabs from one browser to another.
 
-if application sourceBrowser is not running then
-	display alert sourceBrowser & " is not running."
-	return
-end if
+-- config
+property sourceBrowser : "Safari"
+property destinationBrowser : "Google Chrome"
 
-set urls to {} -- a list of tab urls to transport
+on run
+	assertRunning()
+	assertHasOpenWindow()
+	set sourceWindow to assertFrontmost()
+	set urls to getTabs(sourceWindow)
+	assertUrlsMoveable(urls)
+	closeTabs(sourceWindow)
+	openTabs(urls)
+end run
 
--- collect tabs open in the frontmost window of source browser
-using terms from application "Safari"
-	tell application sourceBrowser
-		
-		-- exit if no tabs are open
-		if (count windows) = 0 then
-			display alert "There are no open tabs to transport from " & sourceBrowser & "."
-			return
-		end if
-		
-		set currentWindow to front window
-		
-		-- exit if no frontmost tabs are open
-		if currentWindow is miniaturized then
-			display alert "The frontmost window of " & sourceBrowser & " is ignored because it is minimized."
-			return
-		end if
-		
-		-- stash tabs from source browser's frontmost window
-		set the_tabs to get every tab of currentWindow
-		repeat with t in the_tabs
-			set u to (get URL of t)
-			try
-				if u is not "topsites://" then
-					copy u to end of urls
-				end if
-			on error errorStr number errorNumber
-				-- swallow blank tabs
-			end try
-		end repeat
-		
-		-- exit if no valid tabs
-		if (count of urls) = 0 then
-			display alert "There are no valid URLs to transport."
-			return
-		end if
-		
-		close currentWindow -- close window in source browser
-		
-	end tell
-end using terms from
+-- warn if browser isn't running
+on assertRunning()
+	if application sourceBrowser is not running then
+		set msg to sourceBrowser & " is not running."
+		peaceOut(msg)
+	end if
+end assertRunning
 
--- open tabs in desination browser
-using terms from application "Google Chrome"
-	tell application destinationBrowser
-		
-		tell (make new window)
-			set URL of active tab to get item 1 of urls
-			repeat with u in rest of urls
-				open location u
+-- warn if browser has no open windows
+on assertHasOpenWindow()
+	using terms from application "Safari"
+		tell application sourceBrowser
+			set openWindowCount to count windows
+		end tell
+	end using terms from
+	if openWindowCount ² 0 then
+		set msg to "There are no open windows to transport from " & sourceBrowser & "."
+		peaceOut(msg)
+	end if
+end assertHasOpenWindow
+
+-- warn if window is minimized to the Dock
+on assertFrontmost()
+	using terms from application "Safari"
+		tell application sourceBrowser
+			set sourceWindow to front window
+		end tell
+	end using terms from
+	if sourceWindow is miniaturized then
+		set msg to "The frontmost window of " & sourceBrowser & " is ignored because it is minimized."
+		peaceOut(msg)
+	end if
+	return sourceWindow
+end assertFrontmost
+
+-- collect tabs from source browser
+on getTabs(sourceWindow)
+	set urls to {} -- list of urls to transport
+	using terms from application "Safari"
+		tell application sourceBrowser
+			set the_tabs to get every tab of sourceWindow
+			repeat with t in the_tabs
+				set u to (get URL of t)
+				try
+					if u is not "topsites://" then
+						copy u to end of urls
+					end if
+				on error errorStr number errorNumber
+					-- swallow blank tabs
+				end try
 			end repeat
 		end tell
-		
-		activate
-		
-	end tell
-end using terms from
+	end using terms from
+	return urls
+end getTabs
+
+-- warn if no urls can be moved (ex. topsites:// page)
+on assertUrlsMoveable(urls)
+	if (count of urls) = 0 then
+		set msg to "There are no valid URLs to transport."
+		peaceOut(msg)
+	end if
+end assertUrlsMoveable
+
+-- close tabs in source browser
+on closeTabs(sourceWindow)
+	using terms from application "Safari"
+		tell application sourceBrowser
+			-- TODO: breaks "History > Reopen Last Closed Window" in Safari
+			close sourceWindow
+		end tell
+	end using terms from
+end closeTabs
+
+-- open tabs in destination browser
+on openTabs(urls)
+	using terms from application "Google Chrome"
+		tell application destinationBrowser
+			tell (make new window)
+				set URL of active tab to get item 1 of urls
+				repeat with u in rest of urls
+					open location u
+				end repeat
+			end tell
+			activate
+		end tell
+	end using terms from
+end openTabs
+
+-- end this script
+on peaceOut(errorMessage)
+	display alert errorMessage
+	error number -128
+end peaceOut
