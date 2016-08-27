@@ -59,7 +59,6 @@ end assertUrlsMoveable
 -- close tabs in source browser
 on closeTabs(sourceWindow)
 	using terms from application "Safari"
-		-- TODO: breaks "History > Reopen Last Closed Window" in Safari
 		tell application sourceBrowser to close sourceWindow
 	end using terms from
 end closeTabs
