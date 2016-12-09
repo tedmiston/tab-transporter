@@ -4,6 +4,13 @@ Move tabs from the frontmost window of `<source browser>` into `<destination bro
 
 I developed Tab Transporter out of personal utility because I couldn't find anything else that did exactly what I wanted.
 
+Tab Transporter supports moving tabs from source to destination in the following directions:
+
+Source        | Destination   | File Name
+------------- | ------------- | ---------------------------------
+Google Chrome | Safari        | `tt_chrome_to_safari.applescript`
+Safari        | Google Chrome | `tt_safari_to_chrome.applescript`
+
 ## Use Case
 
 - I've opened a bunch of tabs in Safari (such as new apps to check out), but I need to get them out of the way for now to focus on work
