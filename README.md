@@ -20,6 +20,7 @@ Tested on Mac OS X 10.11.6.
   - Export As: Tab Transporter - Safari to Chrome.app
   - Folder: Applications
   - File Format: Application 
+  - Options: (none checked)
   - Code Sign: Don't Code Sign
 - Repeat for other source --> destination browsers of interest
 
