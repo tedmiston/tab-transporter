@@ -15,12 +15,13 @@ Tested on Mac OS X 10.11.6.
 ## Installation
 
 - Open AppleScript Editor in Applications > Utilities 
-- Copy and paste the contents of `/AppleScript/tab_transporter.applescript` into a new document
+- Open `/AppleScript/tab_transporter_safari_to_chrome.applescript`
 - `File > Export...`
-	  - Export As: Tab Transporter.app
-	  - Folder: Applications
-	  - File Format: Application 
-	  - Code Sign: Don't Code Sign
+  - Export As: Tab Transporter - Safari to Chrome.app
+  - Folder: Applications
+  - File Format: Application 
+  - Code Sign: Don't Code Sign
+- Repeat for other source --> destination browsers of interest
 
 ## Usage
 
