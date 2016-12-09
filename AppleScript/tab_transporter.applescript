@@ -1,4 +1,4 @@
--- Transport tabs from one browser to another.
+-- Transport tabs from one browser to another.  This script moves tabs from Safari to Google Chrome.
 
 -- config
 property sourceBrowser : "Safari"
