@@ -4,8 +4,6 @@ Move tabs from the frontmost window of `<source browser>` into `<destination bro
 
 I developed Tab Transporter out of personal utility because I couldn't find anything else that did exactly what I wanted.
 
-Tested on Mac OS X 10.11.6.
-
 ## Use Case
 
 - I've opened a bunch of tabs in Safari (such as new apps to check out), but I need to get them out of the way for now to focus on work
@@ -45,3 +43,7 @@ Dr. Drang wrote a similar survey of the same problem in October 2012 in *[Saving
 - [Switch](http://www.macupdate.com/app/mac/42431/switch)
   - Has cross-browser sync, but... handles only one page at a time, and consumes precious menu bar real estate
   - No longer maintained
+
+## Misc
+
+Tested on Mac OS X 10.11.6. Other recent versions should work, but have not been tested by me personally.
