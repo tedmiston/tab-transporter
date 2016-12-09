@@ -1,6 +1,6 @@
 # Tab Transporter
 
-Move tabs from the frontmost Safari window into Chrome.
+Move tabs from the frontmost window of `<source browser>` into `<destination browser>` where source and destination are Google Chrome or Safari.
 
 I developed Tab Transporter out of personal utility because I couldn't find anything else that did exactly what I wanted.
 
@@ -14,15 +14,17 @@ Tested on Mac OS X 10.11.6.
 
 ## Installation
 
-- Open AppleScript Editor in Applications > Utilities 
-- Open `/AppleScript/tab_transporter_safari_to_chrome.applescript`
+This is an example for the Safari to Chrome version. There's also a Chrome to Safari version included, and there will probably be additional browser support in the future.
+
+- In the `AppleScript` folder, open one of the `tt_*.applescript` files in Script Editor.app (we'll start with `tt_safari_to_chrome.applescript`)
 - `File > Export...`
   - Export As: Tab Transporter - Safari to Chrome.app
   - Folder: Applications
   - File Format: Application 
   - Options: (none checked)
   - Code Sign: Don't Code Sign
-- Repeat for other source --> destination browsers of interest
+
+For other browsers, repeat the above instructions *changing the source and destination browser names* when choosing the script file to open and exporting it as an app.
 
 ## Usage
 
