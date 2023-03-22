@@ -6,10 +6,10 @@ I developed Tab Transporter out of personal utility because I couldn't find anyt
 
 Tab Transporter supports moving tabs from source to destination in the following directions:
 
-Source        | Destination   | File Name
-------------- | ------------- | ---------------------------------
-Google Chrome | Safari        | `tt_chrome_to_safari.applescript`
-Safari        | Google Chrome | `tt_safari_to_chrome.applescript`
+| Source        | Destination   | File Name                         |
+|:--------------|:--------------|:----------------------------------|
+| Google Chrome | Safari        | `tt_chrome_to_safari.applescript` |
+| Safari        | Google Chrome | `tt_safari_to_chrome.applescript` |
 
 ## Use Case
 
