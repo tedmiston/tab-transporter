@@ -16,12 +16,10 @@ I developed *Tab Transporter* out of personal utility because I couldn't find an
 
 Tab Transporter supports moving tabs across browsers like so (`tt_<source>_to_<destination>.applescript`):
 
-**Browser support:**
+**Browsers:**
 
 | Source            | Destination   | Support |
 |:------------------|:--------------|:--------|
-| **Brave**         | Google Chrome | ✅       |
-| Brave             | Safari        | ✅       |
 | **Google Chrome** | Brave         | ✅       |
 | Google Chrome     | Safari        | ✅       |
 | **Safari**        | Brave         | ✅       |
@@ -30,8 +28,12 @@ Tab Transporter supports moving tabs across browsers like so (`tt_<source>_to_<d
 | \*                | Firefox       | 🔜       |
 | **Opera**         | \*            | 🔜       |
 | \*                | Opera         | 🔜       |
+| **Brave**         | Google Chrome | ✅       |
+| Brave             | Safari        | ✅       |
 | **Arc**           | \*            | 🛑       |
 | \*                | Arc           | 🛑       |
+
+*Note: Browsers are ordered [by usage share](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables) according to Wikipedia*
 
 Key:
 
