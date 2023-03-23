@@ -9,6 +9,9 @@ More precisely, it moves tabs from the frontmost window of `<source browser>` to
 - [Firefox](https://en.wikipedia.org/wiki/Firefox) 🔜
 - [Opera](https://en.wikipedia.org/wiki/Opera_(web_browser)) 🔜
 - [Brave](https://en.wikipedia.org/wiki/Brave_(web_browser)) ✅
+- [Arc](https://arc.net/) 🛑
+- [Sidekick](https://www.meetsidekick.com/) 🔜
+- [Vivaldi](https://en.wikipedia.org/wiki/Vivaldi_(web_browser)) 🔜
 
 ---
 
