@@ -7,6 +7,7 @@ More precisely, it moves tabs from the frontmost window of `<source browser>` to
 - [Brave](https://en.wikipedia.org/wiki/Brave_(web_browser))
 - [Firefox](https://en.wikipedia.org/wiki/Firefox) (coming soon)
 - [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
+- [Opera](https://en.wikipedia.org/wiki/Opera_(web_browser)) (coming soon)
 - [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser))
 
 ---
@@ -27,6 +28,8 @@ Tab Transporter supports moving tabs across browsers like so (`tt_<source>_to_<d
 | Safari            | Google Chrome | ✅       |
 | **Firefox**       | \*            | 🔜       |
 | \*                | Firefox       | 🔜       |
+| **Opera**         | \*            | 🔜       |
+| \*                | Opera         | 🔜       |
 | **Arc**           | \*            | 🛑       |
 | \*                | Arc           | 🛑       |
 
