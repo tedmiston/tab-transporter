@@ -24,7 +24,7 @@ on assertHasOpenWindow()
 	using terms from application "Google Chrome"
 		tell application sourceBrowser to set openWindowCount to count windows
 	end using terms from
-	if openWindowCount <= 0 then peaceOut("There are no open windows to transport from " & sourceBrowser & ".")
+	if openWindowCount ² 0 then peaceOut("There are no open windows to transport from " & sourceBrowser & ".")
 end assertHasOpenWindow
 
 -- warn if window is minimized to the Dock
