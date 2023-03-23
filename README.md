@@ -31,12 +31,12 @@ Tab Transporter supports moving tabs across browsers like so (`tt_<source>_to_<d
 
 Key:
 
-| Symbol | Meaning | Notes                                                  |
-|:-------|:--------|:-------------------------------------------------------|
-| ✅      | Yes     | This browser is supported.                             |
-| ❌      | No      | This browser is not supported.                         |
-| 🛑      | Blocked | Implementation blocked (this browser uses a waitlist). |
-| 🔜      | Todo    | To be implemented.                                     |
+| Symbol | Meaning | Notes                                                 |
+|:-------|:--------|:------------------------------------------------------|
+| ✅      | Yes     | This browser is supported                             |
+| ❌      | No      | This browser is not supported                         |
+| 🛑      | Blocked | Implementation blocked (this browser uses a waitlist) |
+| 🔜      | Todo    | To be implemented                                     |
 
 ## Use Case
 
