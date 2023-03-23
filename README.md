@@ -4,11 +4,11 @@
 
 More precisely, it moves tabs from the frontmost window of `<source browser>` to `<destination browser>`, where the supported browsers are:
 
-- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
-- [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser))
-- [Firefox](https://en.wikipedia.org/wiki/Firefox) (coming soon)
-- [Opera](https://en.wikipedia.org/wiki/Opera_(web_browser)) (coming soon)
-- [Brave](https://en.wikipedia.org/wiki/Brave_(web_browser))
+- [Chrome](https://en.wikipedia.org/wiki/Google_Chrome) ✅
+- [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser)) ✅
+- [Firefox](https://en.wikipedia.org/wiki/Firefox) 🔜
+- [Opera](https://en.wikipedia.org/wiki/Opera_(web_browser)) 🔜
+- [Brave](https://en.wikipedia.org/wiki/Brave_(web_browser)) ✅
 
 ---
 
@@ -18,26 +18,26 @@ Tab Transporter supports moving tabs across browsers like so (`tt_<source>_to_<d
 
 **Browsers:**
 
-| Source            | Destination   | Support |
-|:------------------|:--------------|:--------|
-| **Google Chrome** | Safari        | ✅       |
-|                   | Firefox       | 🔜       |
-|                   | Opera         | 🔜       |
-|                   | Brave         | ✅       |
-|                   | Arc           | 🛑       |
-| **Safari**        | Google Chrome | ✅       |
-|                   | Firefox       | 🔜       |
-|                   | Opera         | 🔜       |
-|                   | Brave         | ✅       |
-|                   | Arc           | 🛑       |
-| **Firefox**       | \*            | 🔜       |
-| **Opera**         | \*            | 🔜       |
-| **Brave**         | Google Chrome | ✅       |
-|                   | Safari        | ✅       |
-|                   | Firefox       | 🔜       |
-|                   | Opera         | 🔜       |
-|                   | Arc           | 🛑       |
-| **Arc**           | \*            | 🛑       |
+| Source      | Destination | Support |
+|:------------|:------------|:--------|
+| **Chrome**  | Safari      | ✅       |
+|             | Firefox     | 🔜       |
+|             | Opera       | 🔜       |
+|             | Brave       | ✅       |
+|             | Arc         | 🛑       |
+| **Safari**  | Chrome      | ✅       |
+|             | Firefox     | 🔜       |
+|             | Opera       | 🔜       |
+|             | Brave       | ✅       |
+|             | Arc         | 🛑       |
+| **Firefox** | \*          | 🔜       |
+| **Opera**   | \*          | 🔜       |
+| **Brave**   | Chrome      | ✅       |
+|             | Safari      | ✅       |
+|             | Firefox     | 🔜       |
+|             | Opera       | 🔜       |
+|             | Arc         | 🛑       |
+| **Arc**     | \*          | 🛑       |
 
 *Note: Browsers are ordered [by usage share](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables) according to Wikipedia*
 

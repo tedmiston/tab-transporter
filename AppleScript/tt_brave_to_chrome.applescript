@@ -1,4 +1,4 @@
--- Transport tabs from one browser to another.  This script moves tabs from Brave to Google Chrome.
+-- Transport tabs from one browser to another.  This script moves tabs from Brave to Chrome.
 
 -- config
 property sourceBrowser : "Brave Browser"
