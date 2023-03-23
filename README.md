@@ -14,14 +14,25 @@ I developed *Tab Transporter* out of personal utility because I couldn't find an
 
 Tab Transporter supports moving tabs across browsers like so (`tt_<source>_to_<destination>.applescript`):
 
-| Source        | Destination   | Script                            |
-|:--------------|:--------------|:----------------------------------|
-| Brave         | Safari        | `tt_brave_to_safari.applescript`  |
-| Brave         | Google Chrome | `tt_brave_to_chrome.applescript`  |
-| Google Chrome | Brave         | `tt_chrome_to_brave.applescript`  |
-| Google Chrome | Safari        | `tt_chrome_to_safari.applescript` |
-| Safari        | Brave         | `tt_safari_to_brave.applescript`  |
-| Safari        | Google Chrome | `tt_safari_to_chrome.applescript` |
+**Browser support:**
+
+| Source            | Destination   | Support |
+|:------------------|:--------------|:--------|
+| **Brave**         | Google Chrome | ✅       |
+| Brave             | Safari        | ✅       |
+| **Google Chrome** | Brave         | ✅       |
+| Google Chrome     | Safari        | ✅       |
+| **Safari**        | Brave         | ✅       |
+| Safari            | Google Chrome | ✅       |
+
+Key:
+
+| Symbol | Meaning | Notes                                                  |
+|:-------|:--------|:-------------------------------------------------------|
+| ✅      | Yes     | This browser is supported.                             |
+| ❌      | No      | This browser is not supported.                         |
+| 🛑      | Blocked | Implementation blocked (this browser uses a waitlist). |
+| 🔜      | Todo    | To be implemented.                                     |
 
 ## Use Case
 
