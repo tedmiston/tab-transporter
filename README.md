@@ -1,14 +1,26 @@
-# Tab Transporter
+# Tab Transporter Scripts
 
-Move tabs from the frontmost window of `<source browser>` into `<destination browser>` where source and destination are Google Chrome or Safari.
+**Tab Transporters *transports* *tabs* across broswers on macOS.**
 
-I developed Tab Transporter out of personal utility because I couldn't find anything else that did exactly what I wanted.
+More precisely, it moves tabs from the frontmost window of `<source browser>` to `<destination browser>`, where the supported browsers are:
 
-Tab Transporter supports moving tabs from source to destination in the following directions:
+- [Brave](https://en.wikipedia.org/wiki/Brave_(web_browser))
+- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
+- [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser))
 
-| Source        | Destination   | File Name                         |
+---
+
+I developed *Tab Transporter* out of personal utility because I couldn't find anything else that did exactly what I wanted.
+
+Tab Transporter supports moving tabs across browsers like so (`tt_<source>_to_<destination>.applescript`):
+
+| Source        | Destination   | Script                            |
 |:--------------|:--------------|:----------------------------------|
+| Brave         | Safari        | `tt_brave_to_safari.applescript`  |
+| Brave         | Google Chrome | `tt_brave_to_chrome.applescript`  |
+| Google Chrome | Brave         | `tt_chrome_to_brave.applescript`  |
 | Google Chrome | Safari        | `tt_chrome_to_safari.applescript` |
+| Safari        | Brave         | `tt_safari_to_brave.applescript`  |
 | Safari        | Google Chrome | `tt_safari_to_chrome.applescript` |
 
 ## Use Case
@@ -24,9 +36,10 @@ This is an example for the Safari to Chrome version. There's also a Chrome to Sa
 - In the `AppleScript` folder, open one of the `tt_*.applescript` files in Script Editor.app (we'll start with `tt_safari_to_chrome.applescript`)
 - `File > Export...`
   - Export As: Tab Transporter - Safari to Chrome.app
-  - Folder: Applications
-  - File Format: Application 
-  - Options: (none checked)
+  - Where: Applications
+  - File Format: Application
+  - Options:
+    - (none checked)
   - Code Sign: Don't Code Sign
 
 For other browsers, repeat the above instructions *changing the source and destination browser names* when choosing the script file to open and exporting it as an app.
@@ -53,4 +66,5 @@ Dr. Drang wrote a similar survey of the same problem in October 2012 in *[Saving
 
 ## Misc
 
-Tested on Mac OS X 10.11.6. Other recent versions should work, but have not been tested by me personally.
+Tested on Mac OS X 12.6.3. Other recent will most likely work, but have not been tested by me personally.
+
