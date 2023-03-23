@@ -26,6 +26,8 @@ Tab Transporter supports moving tabs across browsers like so (`tt_<source>_to_<d
 | Safari            | Google Chrome | ✅       |
 | **Firefox**       | \*            | 🔜       |
 | \*                | Firefox       | 🔜       |
+| **Arc**           | \*            | 🛑       |
+| \*                | Arc           | 🛑       |
 
 Key:
 
