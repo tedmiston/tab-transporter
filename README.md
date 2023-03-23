@@ -1,6 +1,6 @@
 # Tab Transporter Scripts
 
-**Tab Transporters *transports* *tabs* across broswers on macOS.**
+**Tab Transporter *transports* *tabs* across broswers on macOS.**
 
 More precisely, it moves tabs from the frontmost window of `<source browser>` to `<destination browser>`, where the supported browsers are:
 
