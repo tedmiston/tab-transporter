@@ -21,26 +21,19 @@ Tab Transporter supports moving tabs across browsers like so (`tt_<source>_to_<d
 
 **Browsers:**
 
-| Source      | Destination | Support |
-|:------------|:------------|:--------|
-| **Chrome**  | Safari      | ✅       |
-|             | Firefox     | 🔜       |
-|             | Opera       | 🔜       |
-|             | Brave       | ✅       |
-|             | Arc         | 🛑       |
-| **Safari**  | Chrome      | ✅       |
-|             | Firefox     | 🔜       |
-|             | Opera       | 🔜       |
-|             | Brave       | ✅       |
-|             | Arc         | 🛑       |
-| **Firefox** | \*          | 🔜       |
-| **Opera**   | \*          | 🔜       |
-| **Brave**   | Chrome      | ✅       |
-|             | Safari      | ✅       |
-|             | Firefox     | 🔜       |
-|             | Opera       | 🔜       |
-|             | Arc         | 🛑       |
-| **Arc**     | \*          | 🛑       |
+| Source       | Destination | Support |
+|:-------------|:------------|:--------|
+| **Chrome**   | Safari      | ✅       |
+|              | Brave       | ✅       |
+| **Safari**   | Chrome      | ✅       |
+|              | Brave       | ✅       |
+| **Firefox**  | \*          | 🔜       |
+| **Opera**    | \*          | 🔜       |
+| **Brave**    | Chrome      | ✅       |
+|              | Safari      | ✅       |
+| **Arc**      | \*          | 🛑       |
+| **Sidekick** | \*          | 🔜       |
+| **Vivaldi**  | \*          | 🔜       |
 
 *Note: Browsers are ordered [by usage share](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables) according to Wikipedia*
 
