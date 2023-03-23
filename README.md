@@ -5,6 +5,7 @@
 More precisely, it moves tabs from the frontmost window of `<source browser>` to `<destination browser>`, where the supported browsers are:
 
 - [Brave](https://en.wikipedia.org/wiki/Brave_(web_browser))
+- [Firefox](https://en.wikipedia.org/wiki/Firefox) (coming soon)
 - [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
 - [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser))
 
